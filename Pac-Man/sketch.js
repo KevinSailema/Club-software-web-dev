@@ -41,9 +41,9 @@ function draw() {
     background(220);
 
     if (keyIsPressed) {
-        if (keyCode == LEFT_ARROW) {
+        if (keyCode == 37) { // Variación de "KeyCode (LEFT_ARROW)"
             pacman1.x -= 1;
-        } else if (keyCode == RIGHT_ARROW) {
+        } else if (keyCode == RIGHT_ARROW) { 
             pacman1.x += 1;
         }
         if (keyCode == UP_ARROW) {
@@ -52,6 +52,23 @@ function draw() {
             pacman1.y += 1;
         }
     }
+
+    if (keyIsPressed) {
+        if (keyCode == 65) { // A
+            pacman2.x -= 1;
+            lastKeyPressed = "A";
+        } else if (keyCode == 68) { // D
+            pacman2.x += 1;
+            lastKeyPressed = "D";
+        } else if (keyCode == 87) { // W
+            pacman2.y -= 1;
+            lastKeyPressed = "W";
+        } else if (keyCode == 83) { // S
+            pacman2.y += 1;
+            lastKeyPressed = "S";
+        }
+    }
+
 
 
 

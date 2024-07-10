@@ -67,3 +67,17 @@ function drawInfoKeyboard() {
     textAlign(LEFT, TOP);
     text("Última tecla presionada: " + lastKeyPressed, 10, 10);
 }
+
+function keyPressed() {
+    if (keyCode === LEFT_ARROW) {
+        lastKeyPressed = "←";
+    } else if (keyCode === RIGHT_ARROW) {
+        lastKeyPressed = "→";
+    } else if (keyCode === UP_ARROW) {
+        lastKeyPressed = "↑";
+    } else if (keyCode === DOWN_ARROW) {
+        lastKeyPressed = "↓";
+    } else {
+        lastKeyPressed = key;
+    }
+}
